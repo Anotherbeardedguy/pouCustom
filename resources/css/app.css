@@ -36,7 +36,7 @@
   }
   
   .search {
-    width: 6rem;
+ 
     border:none;
     background-size: 4rem 2px;
     background-position: bottom center;
@@ -99,8 +99,8 @@
     background-size: 2rem 2px;
   }
   .hero-container {
-    height: 840px;
-  
+    height: 640px;
+
     opacity: 1;
   
   }

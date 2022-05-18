@@ -36,6 +36,22 @@ function tailpress_setup() {
 add_action( 'after_setup_theme', 'tailpress_setup' );
 
 /**
+* Create hero image Setting and Upload Control
+*/
+function tailpress_customizer_settings($wp_customize) {
+	// add a setting for the
+	$wp_customize->add_setting('hero-image');
+	// Add a control to upload 
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'hero-image',
+	array(
+	'label' => 'Upload Hero image',
+	'section' => 'title_tagline',
+	'settings' => 'hero-image',
+	) ) );
+	}
+	add_action('customize_register', 'tailpress_customizer_settings');
+
+/**
  * Enqueue theme assets.
  */
 function tailpress_enqueue_scripts() {
@@ -107,3 +123,7 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+/**
+* Customizer additions.
+*/
