@@ -1,0 +1,9 @@
+Snippets:
+<?php language_attributes() ?>
+
+<?php bloginfo('charset')?>
+
+<?php wp_head() ?>
+<?php ?>
+<?php ?>
+<?php ?>
